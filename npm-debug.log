@@ -1,0 +1,194 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'flash' ]
+2 info using npm@1.1.36
+3 info using node@v0.8.2
+4 verbose config file C:\Users\jake\.npmrc
+5 verbose config file c:\Program Files\nodejs\etc\npmrc
+6 verbose config file c:\Program Files\nodejs\node_modules\npm\npmrc
+7 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\package.json
+8 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\connect-flash\package.json
+9 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\cradle\package.json
+10 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\ejs\package.json
+11 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\express\package.json
+12 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\http\package.json
+13 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\less-middleware\package.json
+14 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\passport\package.json
+15 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\passport-local\package.json
+16 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\path\package.json
+17 verbose read json c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\node_modules\routes\package.json
+18 verbose from cache c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me\package.json
+19 verbose readDependencies using package.json deps
+20 verbose cache add [ 'flash', null ]
+21 silly cache add name=undefined spec="flash" args=["flash",null]
+22 verbose parsed url { pathname: 'flash', path: 'flash', href: 'flash' }
+23 silly lockFile 6117e45a-flash flash
+24 verbose lock flash C:\Users\jake\AppData\Roaming\npm-cache\6117e45a-flash.lock
+25 silly lockFile 6117e45a-flash flash
+26 verbose addNamed [ 'flash', '' ]
+27 verbose addNamed [ null, '' ]
+28 silly lockFile 64504738-flash flash@
+29 verbose lock flash@ C:\Users\jake\AppData\Roaming\npm-cache\64504738-flash.lock
+30 silly addNameRange { name: 'flash', range: '', hasData: false }
+31 verbose url raw flash
+32 verbose url resolving [ 'https://registry.npmjs.org/', './flash' ]
+33 verbose url resolved https://registry.npmjs.org/flash
+34 info retry registry request attempt 1 at 20:28:15
+35 http GET https://registry.npmjs.org/flash
+36 http 200 https://registry.npmjs.org/flash
+37 silly registry.get cb [ 200,
+37 silly registry.get   { vary: 'Accept',
+37 silly registry.get     server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+37 silly registry.get     etag: '"37NPX6W1IIOCECXD4PSQ5CIR2"',
+37 silly registry.get     date: 'Fri, 07 Sep 2012 03:28:05 GMT',
+37 silly registry.get     'content-type': 'application/json',
+37 silly registry.get     'content-length': '8514' } ]
+38 silly addNameRange number 2 { name: 'flash', range: '', hasData: true }
+39 silly addNameRange versions [ 'flash', [ '0.5.3', '0.5.4', '0.5.5', '0.5.7' ] ]
+40 verbose addNamed [ 'flash', '0.5.7' ]
+41 verbose addNamed [ '0.5.7', '0.5.7' ]
+42 silly lockFile 4097e715-flash-0-5-7 flash@0.5.7
+43 verbose lock flash@0.5.7 C:\Users\jake\AppData\Roaming\npm-cache\4097e715-flash-0-5-7.lock
+44 silly lockFile d8d2e290--npmjs-org-flash-flash-0-5-7-tgz https://registry.npmjs.org/flash/-/flash-0.5.7.tgz
+45 verbose lock https://registry.npmjs.org/flash/-/flash-0.5.7.tgz C:\Users\jake\AppData\Roaming\npm-cache\d8d2e290--npmjs-org-flash-flash-0-5-7-tgz.lock
+46 verbose addRemoteTarball [ 'https://registry.npmjs.org/flash/-/flash-0.5.7.tgz',
+46 verbose addRemoteTarball   'cc1338a436a2a9f853b3e246082a6ffd86bb41a4' ]
+47 info retry fetch attempt 1 at 20:28:17
+48 verbose fetch to= C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\tmp.tgz
+49 http GET https://registry.npmjs.org/flash/-/flash-0.5.7.tgz
+50 http 200 https://registry.npmjs.org/flash/-/flash-0.5.7.tgz
+51 silly shasum updated bytes 10682
+52 info shasum cc1338a436a2a9f853b3e246082a6ffd86bb41a4
+52 info shasum C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\tmp.tgz
+53 verbose tar unpack C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\tmp.tgz
+54 silly lockFile ce69b3cb-97217-0-3346206434071064-package C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\package
+55 verbose lock C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\package C:\Users\jake\AppData\Roaming\npm-cache\ce69b3cb-97217-0-3346206434071064-package.lock
+56 silly gunzTarPerm modes [ '755', '644' ]
+57 silly gunzTarPerm extractEntry templates/
+58 silly gunzTarPerm extractEntry templates/application/
+59 silly gunzTarPerm extractEntry templates/application/.frst/
+60 silly gunzTarPerm extractEntry templates/application/.frst/.npmignore
+61 silly gunzTarPerm extractEntry templates/application/app.coffee
+62 silly gunzTarPerm extractEntry templates/application/Readme.md
+63 silly gunzTarPerm extractEntry templates/module/
+64 silly gunzTarPerm extractEntry templates/module/package.json
+65 silly gunzTarPerm extractEntry templates/module/index.coffee.js
+66 silly gunzTarPerm extractEntry templates/module/lib/
+67 silly gunzTarPerm extractEntry templates/module/lib/default.coffee.js
+68 silly gunzTarPerm extractEntry templates/module/Readme.md
+69 silly gunzTarPerm extractEntry package.json
+70 silly gunzTarPerm extractEntry Cakefile
+71 silly gunzTarPerm extractEntry test/
+72 silly gunzTarPerm extractEntry test/archer-deployment-tests.coffee
+73 silly gunzTarPerm extractEntry .npmignore
+74 silly gunzTarPerm extractEntry bin/
+75 silly gunzTarPerm extractEntry bin/cli.coffee
+76 silly gunzTarPerm extractEntry .travis.yml
+77 silly gunzTarPerm extractEntry lib/
+78 silly gunzTarPerm extractEntry lib/flash.coffee
+79 silly gunzTarPerm extractEntry Readme.md
+80 verbose read json C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\package\package.json
+81 silly lockFile ce69b3cb-97217-0-3346206434071064-package C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\package
+82 verbose from cache C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\package\package.json
+83 verbose tar pack [ 'C:\\Users\\jake\\AppData\\Roaming\\npm-cache\\flash\\0.5.7\\package.tgz',
+83 verbose tar pack   'C:\\Users\\jake\\AppData\\Local\\Temp\\npm-8572\\1346988497217-0.3346206434071064\\package' ]
+84 verbose tarball C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package.tgz
+85 verbose folder C:\Users\jake\AppData\Local\Temp\npm-8572\1346988497217-0.3346206434071064\package
+86 silly lockFile 07fb7a49-pm-cache-flash-0-5-7-package-tgz C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package.tgz
+87 verbose lock C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package.tgz C:\Users\jake\AppData\Roaming\npm-cache\07fb7a49-pm-cache-flash-0-5-7-package-tgz.lock
+88 silly lockFile 07fb7a49-pm-cache-flash-0-5-7-package-tgz C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package.tgz
+89 silly lockFile 267f7b2f-ng-npm-cache-flash-0-5-7-package C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package
+90 verbose lock C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package C:\Users\jake\AppData\Roaming\npm-cache\267f7b2f-ng-npm-cache-flash-0-5-7-package.lock
+91 silly lockFile 267f7b2f-ng-npm-cache-flash-0-5-7-package C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package
+92 verbose tar unpack C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package.tgz
+93 silly lockFile 267f7b2f-ng-npm-cache-flash-0-5-7-package C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package
+94 verbose lock C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package C:\Users\jake\AppData\Roaming\npm-cache\267f7b2f-ng-npm-cache-flash-0-5-7-package.lock
+95 silly gunzTarPerm modes [ '755', '644' ]
+96 silly gunzTarPerm extractEntry package.json
+97 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+98 silly gunzTarPerm extractEntry .npmignore
+99 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+100 silly gunzTarPerm extractEntry .travis.yml
+101 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+102 silly gunzTarPerm extractEntry bin/cli.coffee
+103 silly gunzTarPerm modified mode [ 'bin/cli.coffee', 438, 420 ]
+104 silly gunzTarPerm extractEntry Cakefile
+105 silly gunzTarPerm modified mode [ 'Cakefile', 438, 420 ]
+106 silly gunzTarPerm extractEntry lib/flash.coffee
+107 silly gunzTarPerm modified mode [ 'lib/flash.coffee', 438, 420 ]
+108 silly gunzTarPerm extractEntry Readme.md
+109 silly gunzTarPerm modified mode [ 'Readme.md', 438, 420 ]
+110 silly gunzTarPerm extractEntry templates/application/.frst/.npmignore
+111 silly gunzTarPerm modified mode [ 'templates/application/.frst/.npmignore', 438, 420 ]
+112 silly gunzTarPerm extractEntry templates/application/app.coffee
+113 silly gunzTarPerm modified mode [ 'templates/application/app.coffee', 438, 420 ]
+114 silly gunzTarPerm extractEntry templates/application/Readme.md
+115 silly gunzTarPerm modified mode [ 'templates/application/Readme.md', 438, 420 ]
+116 silly gunzTarPerm extractEntry templates/module/package.json
+117 silly gunzTarPerm modified mode [ 'templates/module/package.json', 438, 420 ]
+118 silly gunzTarPerm extractEntry templates/module/index.coffee.js
+119 silly gunzTarPerm modified mode [ 'templates/module/index.coffee.js', 438, 420 ]
+120 silly gunzTarPerm extractEntry templates/module/lib/default.coffee.js
+121 silly gunzTarPerm modified mode [ 'templates/module/lib/default.coffee.js', 438, 420 ]
+122 silly gunzTarPerm extractEntry templates/module/Readme.md
+123 silly gunzTarPerm modified mode [ 'templates/module/Readme.md', 438, 420 ]
+124 silly gunzTarPerm extractEntry test/archer-deployment-tests.coffee
+125 silly gunzTarPerm modified mode [ 'test/archer-deployment-tests.coffee', 438, 420 ]
+126 verbose read json C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package\package.json
+127 silly lockFile 267f7b2f-ng-npm-cache-flash-0-5-7-package C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package
+128 silly shasum updated bytes 9851
+129 info shasum e2e263e01dc16bc5e03cdc99b79ca8943118d449
+129 info shasum C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package.tgz
+130 verbose from cache C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package\package.json
+131 verbose chmod C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package.tgz 644
+132 silly chown skipping for windows C:\Users\jake\AppData\Roaming\npm-cache\flash\0.5.7\package.tgz
+133 silly lockFile d8d2e290--npmjs-org-flash-flash-0-5-7-tgz https://registry.npmjs.org/flash/-/flash-0.5.7.tgz
+134 silly lockFile 4097e715-flash-0-5-7 flash@0.5.7
+135 silly lockFile 64504738-flash flash@
+136 silly resolved [ { name: 'flash',
+136 silly resolved     version: '0.5.7',
+136 silly resolved     description: 'A command line tool for speedy application management',
+136 silly resolved     keywords: [ 'deployment', 'framework', 'mongoose', 'coffee-script' ],
+136 silly resolved     homepage: 'https://github.com/frst/flash',
+136 silly resolved     preferGlobal: true,
+136 silly resolved     bugs:
+136 silly resolved      { url: 'https://github.com/frst/flash',
+136 silly resolved        email: 'paul@onfrst.com' },
+136 silly resolved     main: './lib/flash.coffee',
+136 silly resolved     bin: { flash: './bin/cli.coffee' },
+136 silly resolved     repository: { type: 'git', url: 'https://github.com/frst/flash.git' },
+136 silly resolved     scripts: { test: 'cake test' },
+136 silly resolved     engines: { node: '0.6.12' },
+136 silly resolved     os: [ 'linux' ],
+136 silly resolved     devDependencies: { mocha: '1.3.0', chai: '1.1.1' },
+136 silly resolved     dependencies:
+136 silly resolved      { 'coffee-script': '1.3.3',
+136 silly resolved        commander: '1.0.0',
+136 silly resolved        request: '2.9.203',
+136 silly resolved        async: '0.1.22',
+136 silly resolved        mime: '1.2.6',
+136 silly resolved        nconf: '0.6.4',
+136 silly resolved        frst: '0.0.5',
+136 silly resolved        volo: '0.2.2' },
+136 silly resolved     _id: 'flash@0.5.7',
+136 silly resolved     dist: { shasum: 'e2e263e01dc16bc5e03cdc99b79ca8943118d449' },
+136 silly resolved     _from: 'flash' } ]
+137 info install flash@0.5.7 into c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me
+138 info installOne flash@0.5.7
+139 warn engine flash@0.5.7: wanted: {"node":"0.6.12"} (current: {"node":"0.8.2","npm":"1.1.36"})
+140 error notsup Unsupported
+140 error notsup Not compatible with your operating system or architecture: flash@0.5.7
+140 error notsup Valid OS:    linux
+140 error notsup Valid Arch:  any
+140 error notsup Actual OS:   win32
+140 error notsup Actual Arch: x64
+141 error System Windows_NT 6.1.7601
+142 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "flash"
+143 error cwd c:\Users\jake\Documents\Jakes\School\Art Institute of Portland\WDIM 493 - Node.js\set-list.me
+144 error node -v v0.8.2
+145 error npm -v 1.1.36
+146 error code EBADPLATFORM
+147 error message Unsupported
+148 verbose exit [ 1, true ]

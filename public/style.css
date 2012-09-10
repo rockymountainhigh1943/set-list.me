@@ -1,0 +1,48 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, del, dfn, em, font, img, ins, kbd, q, s, samp, acronym, address, big, cite, code,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {font-size:100%;font-family:inherit;vertical-align:baseline;margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;}caption, th, td {text-align:left;font-weight:normal;}table {border-collapse:separate;border-spacing:0;}blockquote:before,blockquote:after,q:before,q:after {content: "";}blockquote, q {quotes: "" "";}
+
+
+body {
+	font-family: 'Karla', sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+}
+
+/* ------------- Typograhy ------------- */
+
+#content p, #content ul, #content ol {
+	margin-bottom:15px;
+}
+
+#content ul, #content ol {
+	list-style-position:inside;
+}
+
+#content strong, #content b {
+	font-weight:bold;
+}
+
+#content i, #content em {
+	font-style:italic;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.alignleft {
+	float:left;
+	padding-right:10px;
+	margin-top:5px;
+	padding-bottom:10px;
+}
+
+.alignright {
+	float:right;
+	padding-left:10px;
+	margin-top:5px;
+	padding-bottom:10px;
+}
+
+/* ----------- END Typograhy ----------- */
