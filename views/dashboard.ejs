@@ -23,7 +23,7 @@
 		    
 		});
 
-		var socket = io.connect(location);
+		var socket = io.connect(location.hostname, location.port);
 	    socket.on('news', function (data) {
 		    console.log(data);
 	  	});

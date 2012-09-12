@@ -119,7 +119,7 @@ var io = socketio.listen(server);
 
 // On Connection
 io.sockets.on('connection', function(socket){
-  socket.emit('news', { notification: 'User Logged On' });
+  io.sockets.emit('news', { notification: 'User Logged On' });
 
   socket.on('message', function(data){
     io.sockets.emit('message', data);
