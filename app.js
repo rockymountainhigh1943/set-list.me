@@ -5,6 +5,7 @@ var express = require('express')
   , cradle = require('cradle')
   , passport = require('passport')
   , flash = require('connect-flash')
+  , socketio = require('socket.io')
   , LocalStrategy = require('passport-local').Strategy;
 
 var conn = new cradle.Connection();
@@ -71,6 +72,14 @@ passport.deserializeUser(function(username, done) {
   });
 });
 
+// We start our Express server
+var server = http.createServer(app);
+server.listen(app.get('port'), function(){
+  console.log("Express server listening on port " + app.get('port'));
+});
+
+
+
 
 
 // Get the login screen 
@@ -105,12 +114,15 @@ app.get('/dashboard', ensureAuthenticated, function(req, res){
 
 
 
+// Socket.IO Stuff
+var io = socketio.listen(server);
 
+// On Connection
+io.on('connection', function(socket){
+  io.sockets.emit('message', {message: 'User Loged On'}); // Tell all users another user logged on
 
+  socket.on('message', function(data){
+    io.sockets.emit('message', data);
+  });
 
-
-
-// We start our Express server
-http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
 });

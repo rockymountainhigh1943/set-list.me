@@ -7,6 +7,10 @@ body {
 	line-height: 22px;
 }
 
+input#song {
+	color: #ccc;
+}
+
 /* ------------- Typograhy ------------- */
 
 #content p, #content ul, #content ol {

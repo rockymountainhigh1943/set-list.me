@@ -3,4 +3,32 @@
 	<h1>Dashboard: <%= band.name %></h1>
 	<p>Welcome <%= user.first %>!</p>
 
+	<form id="addSong" method="POST" action="/addSong">
+		<input type="text" name="song" id="song" value="Song Name Here..." />
+	</form>
+
+	<script>
+	$(function(){
+		$('#song').click(function(){
+			$(this).val('');
+			$(this).css('color', '#000');
+		});
+		
+		$('#addSong').submit(function(e){
+			e.preventDefault();
+			$(this).val('');
+			$(this).css('color', '#CCC');
+
+		    //socket.emit('message', { message: $('input.message').val() });
+		    
+		});
+
+		var socket = io.connect(location);
+	    socket.on('message', function(data){
+	      console.log(data.message);
+	    });
+
+	});
+	</script>
+
 <% include footer %>
