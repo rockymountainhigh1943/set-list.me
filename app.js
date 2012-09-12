@@ -118,8 +118,8 @@ app.get('/dashboard', ensureAuthenticated, function(req, res){
 var io = socketio.listen(server);
 
 // On Connection
-io.on('connection', function(socket){
-  io.sockets.emit('message', {message: 'User Loged On'}); // Tell all users another user logged on
+io.sockets.on('connection', function(socket){
+  socket.emit('news', { notification: 'User Logged On' });
 
   socket.on('message', function(data){
     io.sockets.emit('message', data);
