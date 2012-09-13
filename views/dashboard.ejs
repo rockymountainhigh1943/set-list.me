@@ -1,15 +1,18 @@
 <% include header %>
-
+	<div id="tools">
+		Hi, <%= user.first %>!&nbsp;&nbsp;<span class="red">|</span>&nbsp;&nbsp;<a href="/logout">Logout</a>
+	</div>
 	<h1>Dashboard: <%= band.name %></h1>
-	<p>Welcome <%= user.first %>!</p>
+	<p class="bold">Welcome <span class="darkRed"><%= user.first %>!</span> Add some songs below.</p>
 
 	<form id="addSong" method="POST" action="/addSong">
 		<input type="text" name="song" id="song" value="Song Name Here..." />
 	</form>
 
+	<h2>Songs</h2>
 	<ul id="songs">
 	<% for(var i=0; i<list.length; i++) {%>
-	   <li><%= list[i].value.title %></li>
+	   <li id="item-<%= i %>"><%= list[i].value.title %> <a class="delete" href="#item-<%= i %>" rel="<%= list[i].value._rev %>" id="<%= list[i].value._id %>" data-song="<%= list[i].value.title %>">Delete</a></li>
 	<% } %>
 	</ul>
 
@@ -19,15 +22,20 @@
 			$(this).val('');
 			$(this).css('color', '#000');
 		});
+
+		$('#song').blur(function(){
+			 $(this).val('Song Name Here...').css('color', '#777');
+		});
 		
 		$('#addSong').submit(function(e){
 			e.preventDefault();
-			//$(this).val('');
-			//$(this).css('color', '#CCC');
-
+		
 			var songTitle = $('#song').val();
-		    socket.emit('newSong', { message: songTitle, user: '<%= user._id %>', band: '<%= user.band_id %>' });
-		    
+
+		    socket.emit('newSong', { message: songTitle, user: <%= user.user_id %>, band: <%= user.band_id %> }); 
+
+		    $('#song').val('');
+
 		});
 
 		var socket = io.connect(location.hostname, location.port);
@@ -46,6 +54,26 @@
 	  	// Failure Notice
 	  	socket.on('failure', function (data){
 	  		$().toastmessage('showErrorToast', data.message);
+	  	});
+
+	  	// Removed Song
+	  	socket.on('deleteSuccess', function(data){
+	  		$(data.jquery).slideUp(500, function(){
+	  			$(this).remove();
+	  		});
+	  		$().toastmessage('showSuccessToast', data.song + ' was deleted');
+	  	});
+
+	  	$('.delete').click(function(e){
+	  		e.preventDefault();
+	  		
+	  		var songId = $(this).attr('id');
+	  		var revId = $(this).attr('rel');
+	  		var which = $(this).attr('data-song');
+	  		var j = $(this).attr('href');
+
+	  		socket.emit('delete', {rev: revId, id: songId, song: which, jquery: j});
+	  		
 	  	});
 
 	});

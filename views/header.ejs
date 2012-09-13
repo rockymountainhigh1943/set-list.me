@@ -19,9 +19,22 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/jquery.toastmessage.js"></script>
+<script src="/jwerty.js"></script>
+<script>
+$(function(){
+	jwerty.key('alt+l', function (){
+		window.location = '/logout';
+	});
+	jwerty.key('down, left, right', function (){
+		$('#song').val('').css('color', '#000').focus();
+	});
+});
+</script>
 <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
 <body> 
 <div id="container">
+	<img src="/images/logo3.png" id="logo" height="79" width="323" alt="Set-List.me" />
+	<div id="content">

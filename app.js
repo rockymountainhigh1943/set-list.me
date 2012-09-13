@@ -139,8 +139,20 @@ io.sockets.on('connection', function(socket){
       }
     });
     
-    
-  
+  });
+
+  socket.on('delete', function (data){
+    db.remove(data.id, data.rev, function (err, res){
+      if(res){
+        io.sockets.emit('deleteSuccess', data);
+      } else {
+        io.sockets.emit('failure', data);
+      }
+    });
+  });
+
+  socket.on('disconnect', function () {
+    io.sockets.emit('news', { notification: 'User Logged Off'});
   });
 
 });
