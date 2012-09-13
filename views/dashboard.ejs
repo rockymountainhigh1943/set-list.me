@@ -7,6 +7,12 @@
 		<input type="text" name="song" id="song" value="Song Name Here..." />
 	</form>
 
+	<ul id="songs">
+	<% for(var i=0; i<list.length; i++) {%>
+	   <li><%= list[i].value.title %></li>
+	<% } %>
+	</ul>
+
 	<script>
 	$(function(){
 		$('#song').click(function(){
@@ -16,16 +22,30 @@
 		
 		$('#addSong').submit(function(e){
 			e.preventDefault();
-			$(this).val('');
-			$(this).css('color', '#CCC');
+			//$(this).val('');
+			//$(this).css('color', '#CCC');
 
-		    //socket.emit('message', { message: $('input.message').val() });
+			var songTitle = $('#song').val();
+		    socket.emit('newSong', { message: songTitle, user: '<%= user._id %>', band: '<%= user.band_id %>' });
 		    
 		});
 
 		var socket = io.connect(location.hostname, location.port);
-	    socket.on('news', function (data) {
-		    console.log(data);
+	    
+	    // User Logs in
+	    socket.on('news', function (data){
+		    $().toastmessage('showNoticeToast', data.notification);
+	  	});
+
+	    // Song added
+	  	socket.on('success', function (data){
+	  		$().toastmessage('showSuccessToast', data.message + ' was added!');
+	  		$('ul#songs').append( $('<li/>').text(data.message) );
+	  	});
+
+	  	// Failure Notice
+	  	socket.on('failure', function (data){
+	  		$().toastmessage('showErrorToast', data.message);
 	  	});
 
 	});

@@ -103,10 +103,13 @@ app.get('/logout', function(req, res){
 });
 
 // The user Dashboard
-app.get('/dashboard', ensureAuthenticated, function(req, res){
-  db.get('band-1', function (err, band){
+app.get('/dashboard', ensureAuthenticated, function (req, res){
+  db.get('band-'+req.user.band_id, function (err, band){
     var bandInfo = band;
-    res.render('dashboard', {user: req.user, band: bandInfo});
+    db.view('songs/byBand', {key: req.user.band_id}, function (err, songs){
+      var items = songs;
+      res.render('dashboard', {user: req.user, band: bandInfo,  list: items});
+    });
   });
 });
 
@@ -119,10 +122,25 @@ var io = socketio.listen(server);
 
 // On Connection
 io.sockets.on('connection', function(socket){
-  io.sockets.emit('news', { notification: 'User Logged On' });
+  socket.broadcast.emit('news', { notification: 'User Logged On', id: socket.id });
 
-  socket.on('message', function(data){
-    io.sockets.emit('message', data);
+  socket.on('newSong', function(data){
+
+    db.save({
+      title: data.message,
+      band: data.band,
+      type: 'song',
+      user: data.user
+    }, function (err, res){
+      if(res){
+        io.sockets.emit('success', data);
+      } else {
+        io.sockets.emit('failure', {message: 'Failed to add song'});
+      }
+    });
+    
+    
+  
   });
 
 });
