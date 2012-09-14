@@ -133,7 +133,7 @@ io.sockets.on('connection', function(socket){
       user: data.user
     }, function (err, res){
       if(res){
-        io.sockets.emit('success', data);
+        io.sockets.emit('success', {info: data, response: res});
       } else {
         io.sockets.emit('failure', {message: 'Failed to add song'});
       }

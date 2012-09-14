@@ -46,6 +46,23 @@ body {
 
 #songs {
 	list-style-type: none;
+	margin-top: 10px;
+}
+
+#songs li {
+	background: none repeat scroll 0 0 #333333;
+	color: #FFFFFF;
+	display: block;
+	margin-bottom: 4px;
+	padding: 5px 10px;
+	width: 200px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+#songs li:hover {
+	cursor: pointer;
 }
 
 input#song {
@@ -55,7 +72,7 @@ input#song {
     outline: 0;  
     font: normal 13px/100% Verdana, Tahoma, sans-serif;  
     width: 135px;  
-    background: #FFFFFF; 
+    background: #FFFFFF;
     box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
     -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
     -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
@@ -82,6 +99,7 @@ input#song:hover {
 a.delete:link, a.delete:visited {
 	color: #CC0000;
 	text-decoration: none;
+	margin-left: 10px;
 }
 
 a.delete:hover {

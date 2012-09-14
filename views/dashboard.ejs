@@ -47,8 +47,9 @@
 
 	    // Song added
 	  	socket.on('success', function (data){
-	  		$().toastmessage('showSuccessToast', data.message + ' was added!');
-	  		$('ul#songs').append( $('<li/>').text(data.message) );
+	  		var counter = $('#songs li').length;
+	  		$().toastmessage('showSuccessToast', data.info.message + ' was added!');
+	  		$('ul#songs').append( $('<li id="item-'+counter+'">'+ data.info.message +' <a class="delete" href="#item-'+counter+'" rel="'+data.response.rev+'" id="'+data.response.id+'" data-song="'+ data.info.message +'">Delete</a></li>') );
 	  	});
 
 	  	// Failure Notice
@@ -64,7 +65,7 @@
 	  		$().toastmessage('showSuccessToast', data.song + ' was deleted');
 	  	});
 
-	  	$('.delete').click(function(e){
+	  	$(document).on('click', '.delete', function(e){
 	  		e.preventDefault();
 	  		
 	  		var songId = $(this).attr('id');
