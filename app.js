@@ -80,8 +80,6 @@ server.listen(app.get('port'), function(){
 
 
 
-
-
 // Get the login screen 
 app.get('/', function(req, res){
   res.render('index');
@@ -112,8 +110,6 @@ app.get('/dashboard', ensureAuthenticated, function (req, res){
     });
   });
 });
-
-
 
 
 
@@ -156,3 +152,5 @@ io.sockets.on('connection', function(socket){
   });
 
 });
+
+/* I Fucking Rule! */

@@ -12,7 +12,7 @@
 	<h2>Songs</h2>
 	<ul id="songs">
 	<% for(var i=0; i<list.length; i++) {%>
-	   <li id="item-<%= i %>"><%= list[i].value.title %> <a class="delete" href="#item-<%= i %>" rel="<%= list[i].value._rev %>" id="<%= list[i].value._id %>" data-song="<%= list[i].value.title %>">Delete</a></li><br />
+	   <li id="item-<%= i %>"><%= list[i].value.title %> <a class="delete" href="#item-<%= i %>" rel="<%= list[i].value._rev %>" id="<%= list[i].value._id %>" data-song="<%= list[i].value.title %>">Delete</a></li>
 	<% } %>
 	</ul>
 
@@ -49,7 +49,7 @@
 	  	socket.on('success', function (data){
 	  		var counter = $('#songs li').length;
 	  		$().toastmessage('showSuccessToast', data.info.message + ' was added!');
-	  		$('ul#songs').append( $('<li id="item-'+counter+'">'+ data.info.message +' <a class="delete" href="#item-'+counter+'" rel="'+data.response.rev+'" id="'+data.response.id+'" data-song="'+ data.info.message +'">Delete</a></li><br />') );
+	  		$('ul#songs').append( $('<li id="item-'+counter+'">'+ data.info.message +' <a class="delete" href="#item-'+counter+'" rel="'+data.response.rev+'" id="'+data.response.id+'" data-song="'+ data.info.message +'">Delete</a></li>') );
 	  	});
 
 	  	// Failure Notice
@@ -59,7 +59,7 @@
 
 	  	// Removed Song
 	  	socket.on('deleteSuccess', function(data){
-	  		$(data.jquery).slideUp(500, function(){
+	  		$(data.jquery).fadeOut(500, function(){
 	  			$(this).remove();
 	  		});
 	  		$().toastmessage('showSuccessToast', data.song + ' was deleted');
@@ -74,8 +74,8 @@
 	  		var j = $(this).attr('href');
 
 	  		socket.emit('delete', {rev: revId, id: songId, song: which, jquery: j});
-	  		
 	  	});
+
 
 	});
 	</script>
